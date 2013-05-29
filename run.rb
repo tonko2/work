@@ -18,8 +18,8 @@ def run_system(base, file)
           puts result
         end
       end
-      puts LINE
-      puts "finished copying to the clipboard!" if system("cat #{file} | pbcopy")
+      #copy to clipboard 
+      if system("cat #{file} | pbcopy")
     else
       system("./#{file_names[0]}")
     end
