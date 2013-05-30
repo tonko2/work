@@ -1,0 +1,14 @@
+s1210209:x:16750:1000:Ryota Watanabe:/home/student/s1210209:/bin/csh
+s1210210:x:16751:1000:Tatsuya Arai:/home/student/s1210210:/bin/csh
+s1210211:x:16752:1000:Koji Ishikura:/home/student/s1210211:/bin/csh
+s1210212:x:16753:1000:Masaru Usui:/home/student/s1210212:/bin/csh
+s1210213:x:16754:1000:Takumi Oda:/home/student/s1210213:/bin/csh
+s1210214:x:16755:1000:Yuya Kawashima:/home/student/s1210214:/bin/csh
+s1210215:x:16756:1000:Nozomi Kozawa:/home/student/s1210215:/bin/csh
+s1210216:x:16757:1000:Yusuke Sakai:/home/student/s1210216:/bin/csh
+s1210217:x:16758:1000:Hirofumi Shishido:/home/student/s1210217:/bin/csh
+s1210218:x:16759:1000:Megumi Seki:/home/student/s1210218:/usr/local/bin/tcsh
+s1210219:x:16760:1000:Yusuke Sekiguchi:/home/student/s1210219:/bin/csh
+s1210220:x:16761:1000:Satoshi Takahata:/home/student/s1210220:/bin/csh
+s1210221:x:16762:1000:Takuma Nakae:/home/student/s1210221:/bin/csh
+s1210222:x:16763:1000:Kohei Nishimura:/home/student/s1210222:/bin/csh
