@@ -2,7 +2,6 @@
 
 array = []
 student_name = []
-#dirname = "ICPC"
 dirname = ARGV[0]
 path = []
 
@@ -17,23 +16,24 @@ array.each{|index|
 
 student_name.each{|index|
   begin
+    puts index
     permission = Dir::chdir("/home/student/#{index}")
     next if permission == ""
     Dir::chdir("/home/student/#{index}")
-    tmp_array = `ls -l | grep #{dirname}`
-    next if tmp_array == ""
-    TMP = tmp_array.split(" ")
-    info = TMP[0]
+    tmp = `ls -l | grep #{dirname}`
+    next if tmp == ""
+    t = tmp_array.split(" ")
+    info = t[0]
     if info[4] != '-' && info[6] != '-'
       Dir::chdir("/home/student/#{index}/#{dirname}")
       path.push(Dir::pwd)
     end
   rescue => ex
-    puts ex.message
     next
   end
 }
 
+puts "-------------------------------"
 path.each{|index|
   puts index
 }
