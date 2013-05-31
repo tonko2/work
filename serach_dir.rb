@@ -2,29 +2,40 @@
 
 array = []
 student_name = []
-dirname = "ICPC"
+#dirname = "ICPC"
+dirname = ARGV[0]
+path = []
 
-#tmp = `gentent passwd | grep ^s19`
-tmp = `cat sample.txt`
+tmp = `getent passwd | grep ^s119`
+
 array = tmp.split("\n");
 
-student_name.push("kusakayuuya");
 array.each{|index|
   tmp_array = index.split(":")
   student_name.push(tmp_array[0])
 }
 
 student_name.each{|index|
-  tmp_array = `ls -l ~#{index} | grep #{dirname}`
-  TMP = tmp_array.split(" ")
-  info = TMP[0]
-  puts info
-  if info[4] != '-' && info[6] != '-'
-    puts "ok"
+  begin
+    permission = Dir::chdir("/home/student/#{index}")
+    next if permission == ""
+    Dir::chdir("/home/student/#{index}")
+    tmp_array = `ls -l | grep #{dirname}`
+    next if tmp_array == ""
+    TMP = tmp_array.split(" ")
+    info = TMP[0]
+    if info[4] != '-' && info[6] != '-'
+      Dir::chdir("/home/student/#{index}/#{dirname}")
+      path.push(Dir::pwd)
+    end
+  rescue => ex
+    puts ex.message
+    next
   end
+}
 
-  system("cd")  #Home Directry
-  break;
+path.each{|index|
+  puts index
 }
 
 
